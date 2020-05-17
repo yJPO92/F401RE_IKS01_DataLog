@@ -1,0 +1,42 @@
+*** F401RE_IKS01_DataLog ***
+
+le 17/05/2020: v1.2.0 Maj, ajout Readme & License, compil release, test OK.
+               versionning sous Git local
+
+le 14/08/2019: v1.1.6 affichage nom et version sur TeraTerm et gui.
+               Copie du binary ds base des firmwares et rename .bin.
+
+affichage des 2 états sur VT  ==> compil ok
+AutoInit = 1 si B1 ==> valeurs sur VT (mode VT)
+DataLoggerActive = 1 si GUI actif (mode GUI)
+
+Modif 'PresentationString' ==> OK visible ds UnicleoGUI !! mais ne pas modifier la chaine !!
+
+le 02/07/2019: DataLog  extended !! donc vers Unicleo-GUI
+               si teraterm => msg de bienvenue ok
+               si Unicleo-GUI => choix des sensors ok ; gestion des reg ok
+               loadable
+
+/startup est nécessaire avec startup_stm32f401xe.s
+stm32f401re_flash.ld est le linker déclaré ds les propriétés
+
+UsartBaudRate = 921600 !! ==> affiche ds teraterm, si B1 log values
+
+  /* Interrupt pins X-NUCLEO-IKS01A3 */
+  // LSM6DSO INT1                        PB5
+  // LSM6DSO INT2                        PB4
+  // LPS22HH INT1                        PB10
+  // STTS751 INT                         PC1
+  // M INT1                              PC0
+  // LIS2MDL DRDY/LIS2DW12 INT           PA4
+  // LIS2DW12 INT/LIS2MDL DRDY           PB0
+  // USER INT                            PA10
+
+  /* Currently selected sensor instances (defaults) */ ==> sensor_commands.c
+uint32_t AccInstance = IKS01A3_LSM6DSO_0;
+uint32_t GyrInstance = IKS01A3_LSM6DSO_0;
+uint32_t MagInstance = IKS01A3_LIS2MDL_0;
+uint32_t HumInstance = IKS01A3_HTS221_0;
+uint32_t TmpInstance = IKS01A3_HTS221_0;
+uint32_t PrsInstance = IKS01A3_LPS22HH_0;
+  
