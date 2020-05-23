@@ -1,5 +1,6 @@
 *** F401RE_IKS01_DataLog ***
 
+le 22/05/2020: v1.2.1 ajout comments ds .md. chgt version main.h
 le 17/05/2020: v1.2.0 Maj, ajout Readme & License, compil release, test OK.
                versionning sous Git local
 

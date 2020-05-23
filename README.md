@@ -1,4 +1,5 @@
-\mainpage
+<!---  \mainpage  -->
+
 # F401RE\_IKS01\_Unicleo
 Nucleo F401RE + shield IKSA3 + datalogging on VT or via Unicleo_GUI.
 
@@ -41,6 +42,7 @@ Refer, also, to STMicroelectronics licenses:
 
 <!--
 ## yJPO92 comments
+22/05/2020: \mainpage en comment
 Updated on 15/05/2020
 That's all folks!
 --!>

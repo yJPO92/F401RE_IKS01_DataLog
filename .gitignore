@@ -16,6 +16,7 @@
 
 # Atollic setting
 .settings/
+.code_review_properties
 !.project
 !.cproject
 !.mxproject

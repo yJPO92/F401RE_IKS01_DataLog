@@ -56,7 +56,7 @@ extern "C" {
 /* Exported defines ----------------------------------------------------------*/
 
 #define yPROG "*F401RE_IKS01_DataLog*"
-#define yVER  "v1.2.0"		//voir DemoSerial.c
+#define yVER  "v1.2.1"		//voir DemoSerial.c
 #define yDATE "xx-may-2020"
 
 /* Enable sensor masks */
