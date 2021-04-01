@@ -27,19 +27,18 @@
 /startup/
 
 # STMicroelectronic drivers
-# a chacun d'utilser les siens
-/Drivers/
+# save drivers & middleware because some differneces when upgraded
+
 
 # project specifics files (personnal notes & debug helper)
 *.txt
 *.log
-*.png
-*.bat
+!*.bat
 
-#mais garder
+# mais garder
 !Notes.txt
-!STM-readme-DataLogExtended.txt
-!STM-readme-DataLogTerminal.txt
+!*.png
+
 
 # me versionner moi-meme
 !.gitignore
