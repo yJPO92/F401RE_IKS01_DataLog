@@ -1,4 +1,8 @@
 *** F401RE_IKS01_DataLog ***
+*
+* X-CUBE-MEMS1 v6.2.0
+* STM32CubeF4 Firmware Package ??? insert manuel!!
+**************************************
 
 le 01/04/2021   v1.2.2: recompil en F401RE, X-CUBE-MEMS1 v6.2.0
                     ajout de 'Drivers' en versionning

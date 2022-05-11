@@ -165,8 +165,8 @@ int HandleMSG(TMsg *Msg)
       break;
 
     case CMD_Read_PresString:
-      //printf("\n\t--Handle: presString");
-      //printf("\n---msg data: %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2]);
+      printf("\n\t--Handle: presString");
+      printf("\n---msg data: %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2]);
       if (Msg->Len != 3U)
       {
         return 0;

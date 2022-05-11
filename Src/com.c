@@ -128,7 +128,7 @@ int UART_ReceivedMSG(TMsg *Msg)
         UartEngine.StartOfMsg = j;
         if (CHK_CheckAndRemove(Msg) != 0) /* check message integrity */
         {
-            //printf("\n--check error1:%u %u %u %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5]);
+            printf("\n--check error1:%u %u %u %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5]);
             return 1;
         }
       }
@@ -138,7 +138,7 @@ int UART_ReceivedMSG(TMsg *Msg)
       UartEngine.StartOfMsg = dma_counter;
     }
   }
-  //printf("\n--check error0:%u %u %u %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5]);
+  printf("\n--check error0:%u %u %u %u %u %u", Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5]);
   return 0;
 }
 

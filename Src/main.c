@@ -177,7 +177,7 @@ int main(void)
 
     if (UART_ReceivedMSG((TMsg *)&msg_cmd) != 1)
     {
-	 //printf("\n---- msg_cmd? %u %u %u %u ---", msg_cmd.Data[0],msg_cmd.Data[1],msg_cmd.Data[2],msg_cmd.Data[3]);
+	 printf("\n---- msg_cmd? %u %u %u %u ---", msg_cmd.Data[0],msg_cmd.Data[1],msg_cmd.Data[2],msg_cmd.Data[3]);
      if (msg_cmd.Data[0] == DEV_ADDR)
       {
         (void)HandleMSG((TMsg *)&msg_cmd);
@@ -188,7 +188,7 @@ int main(void)
       }
     }
 
-    if (AutoInit == 1U)		//B1 actionné
+    if (AutoInit == 1U)		//yFlag AutoInit, VT mode
     {
       SensorsEnabled = 0xFFFFFFFF;		//select/deselect all sensors
     }
@@ -199,7 +199,9 @@ int main(void)
       Enable_Disable_Sensors();
     }
 
-    RTC_Handler(&msg_dat);		//envoyer l'heure sur GUI ou VT
+    //yFlag Tout le temps (en mode VT & GUI)
+
+    RTC_Handler(&msg_dat);		//yFlag envoyer l'heure VT ou preparer pour GUI
 
     if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
     {
@@ -248,7 +250,7 @@ int main(void)
       BSP_LED_Off(LED2);
     }
 
-    if (DataLoggerActive != 0U)
+    if (DataLoggerActive != 0U)	//yFlag DataLoggerActive, Unicleo mode
     {
       if (NewData != 0U)
       {
