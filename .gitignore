@@ -8,10 +8,10 @@
 
 # mais garder les exec bin & hex
 !/Release/*.hex
-!/Release/*.bin
+!/Release/TrueSTUDIO/*.bin
 !/Release/*.binary
 !/Debug/*.hex
-!/Debug/*.bin
+!/Debug/TrueSTUDIO/*.bin
 !/Debug/*.binary
 
 # Atollic setting
@@ -44,3 +44,4 @@
 !.gitignore
 
 # That's all folks!
+/Debug/
